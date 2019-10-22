@@ -1,0 +1,32 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin image-with-text {
+    position: relative;
+
+    img {
+        position: relative;
+        width: 100vw;
+    }
+
+    .image-info {
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.5rem;
+        z-index: 1;
+        color: #fff;
+        line-height: 0.5rem;
+    }
+    a {
+        color: #fff;
+    }
+}
+
+@mixin list-items {
+    li {
+        list-style: none;
+        padding: 5px
+    }
+}
