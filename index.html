@@ -11,18 +11,21 @@
 
 <body>
     <nav>
-        <ul>
+        <ul class="nav-items">
             <li><a href="">Steun ons</a></li>
             <li><a href="">Engagement & Erfgoed</a></li>
             <li><a href="">Contact</a></li>
         </ul>
+        <!-- <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div> -->
     </nav>
     <header>
         <div class="image-wrapper">
             <img src="images/tutti-fratelli.jpeg" alt="Tutti Fratelli">
             <div class="image-info">
-                <div class="date">vr 11 okt / zo 13 okt</div>
-                <h1>Tutti Fratelli De Onzichtbaren</h1>
+                <div>vr 11 okt / zo 13 okt</div>
+                <h1>Tutti Fratelli <span>De Onzichtbaren</span></h1>
             </div>
         </div>
     </header>
@@ -30,46 +33,49 @@
         <section id="info">
             <div class="buy">
                 <div class="buy-ticket">
-                    <p>€ 26 - € 30 VVK</p>
-                    <p>De ticketprijs is inclusief reservatiekosten.</p>
-                    <button>Koop tickets</button>
-                    <p>Bij dit concert kan je geen tickets kopen met kansentarief, cultuurcheques. Tickets ook
+                    <p class="price">€ 26 - € 30 VVK</p>
+                    <p class="smaller light-gray">De ticketprijs is inclusief reservatiekosten.</p>
+                    <button>
+                        <div>Koop tickets</div>
+                        <div><i class="fas fa-chevron-circle-right"></i></div>
+                    </button>
+                    <p class="smaller">Bij dit concert kan je geen tickets kopen met kansentarief, cultuurcheques. Tickets ook
                         verkrijgbaar
                         bij <a href="https://www.fatkat.be/">Fatkat Records</a>, <a href="https://www.fnac.be/">Fnac</a>
                     </p>
                     <hr>
                     <div class="flex-row">
                         <div>Staand</div>
-                        <div><a href="https://www.develinx.be/"> <i class="fas fa-map-marker-alt"></i> De Velinx</a>
+                        <div><a href="https://www.develinx.be/" class="bold"> <i class="fas fa-map-marker-alt"></i> De Velinx</a>
                         </div>
                     </div>
                     <hr>
                     <table>
-                        <th>Tijdschema</th>
+                        <th><i class="far fa-clock"></i> Tijdschema</th>
                         <tr>
-                            <td>19:15</td>
-                            <td>Doors</td>
+                            <td class="bold">19:15</td>
+                            <td class="light-gray">Doors</td>
                         </tr>
                         <tr>
-                            <td>20:00</td>
-                            <td>Martha Da’ro</td>
+                            <td class="bold">20:00</td>
+                            <td class="light-gray">Martha Da’ro</td>
                         </tr>
                         <tr>
-                            <td>22:30</td>
-                            <td>Blackwave</td>
+                            <td class="bold">22:30</td>
+                            <td class="light-gray">Blackwave</td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div class="info">
                 <ul class="labels">
-                    <li>Concert</li>
-                    <li>pop/rock</li>
-                    <li>singer-songwriter</li>
-                    <li>belgen</li>
+                    <li class="label">Concert</li>
+                    <li class="label">pop/rock</li>
+                    <li class="label">singer-songwriter</li>
+                    <li class="label">belgen</li>
             </div>
             <p><i class="fas fa-user-friends"></i> Co-productie met Live Nation</p>
-            <p>The Bony King of Nowhere is helemaal terug. Gewaagder dan ooit bovendien.
+            <p class="larger">The Bony King of Nowhere is helemaal terug. Gewaagder dan ooit bovendien.
                 Wat begon met rauwe demo-opnames in een koude caravan groeide uit tot
                 een open album dat radicaal breekt met het nauwe keurslijf van de brave
                 popplaat. ‘Silent Days’ ontleedt de smart van een gebroken liefde en
@@ -91,37 +97,44 @@
         </section>
         <section id="data">
             <h2>Alle data</h2>
-
         </section>
         <section id="tips">
             <h2>Enkele aanraders</h2>
-
             <div class="image-wrapper">
                 <img src="images/bex-catherine-romano.jpg" alt="Bex-Catherine-Romano">
                 <div class="image-info">
-                    <p>Nieuwe datum</p>
+                    <p class="new-date">Nieuwe datum</p>
                     <p>di 20 juni</p>
-                    <p>Bex-Catherine-Romano</p>
-                    <a href="">Info & tickets</a>
+                    <p class="artist">Bex-Catherine-Romano</p>
+                    <div>
+                        <a href="">Info & tickets</a>
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </div>
                 </div>
             </div>
             <div class="image-wrapper">
                 <img src="images/the-specials.jpg" alt="The Specials">
                 <div class="image-info">
                     <p>di 10 november</p>
-                    <p>The Specials</p>
-                    <a href="">Info & tickets</a>
+                    <p class="artist">The Specials</p>
+                    <div>
+                        <a href="">Info & tickets</a>
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </div>
                 </div>
             </div>
             <div class="image-wrapper">
                 <img src="images/david-gray.jpg" alt="David Gray">
                 <div class="image-info">
                     <p>do 2 mei</p>
-                    <p>David Gray</p>
-                    <a href="">Info & tickets</a>
+                    <p class="artist">David Gray</p>
+                    <div>
+                        <a href="">Info & tickets</a>
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </div>
                 </div>
             </div>
-            <button>Volledig programma</button>
+            <button class="program-btn">Volledig programma</button>
         </section>
     </main>
     <footer>
@@ -148,18 +161,18 @@
             </div>
             <div>
                 <p class="subtitle">Zaal</p>
-                <p>Het Casino</p>
+                <p class="company">Het Casino</p>
                 <p>Maastrichtersteenweg 1
                     <br>3700 Tongeren
                 </p>
-                <a href="">Toon route</a>
+                <a href="" class="route">Toon route</a>
 
                 <p class="subtitle">Café-restaurant</p>
-                <p>Ijscasino</p>
+                <p class="company">Ijscasino</p>
                 <p>Maastrichtersteenweg 2
                     <br>3700 Tongeren
                 </p>
-                <a href="">Toon route</a>
+                <a href="" class="route">Toon route</a>
             </div>
             <div>
                 <p class="subtitle">Ticketbalie</p>

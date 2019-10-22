@@ -1,3 +1,14 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -8,16 +19,17 @@
 
     img {
         position: relative;
-        width: 100vw;
+        width: 100%;
     }
 
     .image-info {
         position: absolute;
-        left: 0.5rem;
-        bottom: 0.5rem;
+        left: 1rem;
+        bottom: 1rem;
         z-index: 1;
         color: #fff;
-        line-height: 0.5rem;
+        line-height: 0.2rem;
+        background-color: rgba(255, 255, 255, 0.205);
     }
     a {
         color: #fff;
@@ -25,6 +37,8 @@
 }
 
 @mixin list-items {
+    padding: 0;
+
     li {
         list-style: none;
         padding: 5px

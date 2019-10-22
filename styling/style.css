@@ -1,10 +1,8 @@
-html {
+html, body {
   width: 100%;
   color: #000;
-}
-
-img {
-  width: 50%;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -21,11 +19,27 @@ ul li {
   padding: 5px;
 }
 
-main, footer {
-  margin: 20px;
+main {
+  padding: 20px;
 }
 
-nav ul {
+hr {
+  border: 1px solid #658FC1;
+  width: 100%;
+}
+
+p, i {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.larger {
+  font-size: larger;
+}
+
+nav {
+  background-color: #658FC1;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,26 +49,53 @@ nav ul {
           flex-direction: row;
 }
 
+header {
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1 span {
+  font-weight: lighter;
+}
+
 .image-wrapper {
   position: relative;
 }
 
 .image-wrapper img {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 .image-wrapper .image-info {
   position: absolute;
-  left: 0.5rem;
-  bottom: 0.5rem;
+  left: 1rem;
+  bottom: 1rem;
   z-index: 1;
   color: #fff;
-  line-height: 0.5rem;
+  line-height: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.205);
 }
 
 .image-wrapper a {
   color: #fff;
+}
+
+.image-wrapper p, .image-wrapper a, .image-wrapper i {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
+.image-wrapper i {
+  padding-left: 30px;
+}
+
+.image-wrapper .artist {
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .buy-ticket {
@@ -65,6 +106,39 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #658FC1;
+  padding: 10px;
+  margin: 0;
+}
+
+.buy-ticket button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #182D4F;
+  color: #fff;
+  border: none;
+}
+
+.buy-ticket a {
+  text-decoration: underline;
+}
+
+.buy-ticket .price {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.info {
+  padding: 0;
 }
 
 .info li {
@@ -83,6 +157,13 @@ nav ul {
   padding: 0;
 }
 
+.info .labels .label {
+  font-size: 0.7rem;
+  color: #fff;
+  background-color: #000;
+  margin: 3px;
+}
+
 .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,5 +175,104 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.light-gray {
+  color: #5f5f5f;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+table th {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: lighter;
+}
+
+table th i {
+  padding-right: 5px;
+}
+
+table td.bold {
+  width: 1rem;
+}
+
+section#tips {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.program-btn {
+  color: white;
+  background-color: #182D4F;
+  border: none;
+  padding: 15px 10px;
+}
+
+.new-date {
+  background-color: #182D4F;
+  color: #fff;
+  padding: 3px;
+  display: inline;
+  text-transform: uppercase;
+}
+
+.footer-top {
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-top a {
+  color: #658FC1;
+}
+
+.footer-top .route {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding: 0px 20px;
+  background-color: #658FBF;
+}
+
+.footer-bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.subtitle {
+  color: #a0a0a0;
+  text-transform: uppercase;
+}
+
+.company {
+  color: #658FC1;
 }
 /*# sourceMappingURL=style.css.map */
