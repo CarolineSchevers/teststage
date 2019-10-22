@@ -29,12 +29,47 @@ hr {
 }
 
 p, i {
-  margin: 0.5rem 0;
   font-size: 1rem;
+}
+
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #182D4F;
+  color: #fff;
+  border: none;
 }
 
 .larger {
   font-size: larger;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.light-gray {
+  color: #5f5f5f;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.noshow {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 nav {
@@ -43,10 +78,33 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 20px;
+}
+
+.nav-toggle {
+  text-align: right;
+  width: 100%;
+}
+
+.nav-toggle i {
+  padding: 10px 20px;
 }
 
 header {
@@ -112,19 +170,9 @@ h1 span {
 }
 
 .buy-ticket button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  background: #182D4F;
-  color: #fff;
-  border: none;
 }
 
 .buy-ticket a {
@@ -180,18 +228,6 @@ h1 span {
           align-items: center;
 }
 
-.smaller {
-  font-size: smaller;
-}
-
-.light-gray {
-  color: #5f5f5f;
-}
-
-.bold {
-  font-weight: bolder;
-}
-
 table th {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,6 +244,19 @@ table th i {
 
 table td.bold {
   width: 1rem;
+}
+
+.data-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.data-header p {
+  text-transform: uppercase;
 }
 
 section#tips {

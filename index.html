@@ -12,14 +12,14 @@
 <body>
     <div class="wrapper">
         <nav>
-            <ul class="nav-items">
-                <li><a href="">Steun ons</a></li>
-                <li><a href="">Engagement & Erfgoed</a></li>
-                <li><a href="">Contact</a></li>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="nav-items" class="noshow">
+                <li class="nav-item"><a href="">Steun ons</a></li>
+                <li class="nav-item"><a href="">Engagement & Erfgoed</a></li>
+                <li class="nav-item"><a href="">Contact</a></li>
             </ul>
-            <!-- <div class="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </div> -->
         </nav>
         <header>
             <div class="image-wrapper">
@@ -43,8 +43,8 @@
                         <p class="smaller">Bij dit concert kan je geen tickets kopen met kansentarief, cultuurcheques.
                             Tickets ook
                             verkrijgbaar
-                            bij <a href="https://www.fatkat.be/">Fatkat Records</a>, <a
-                                href="https://www.fnac.be/">Fnac</a>
+                            bij <a href="https://www.fatkat.be/">Fatkat Records</a>,
+                            <a href="https://www.fnac.be/">Fnac</a>
                         </p>
                         <hr>
                         <div class="flex-row">
@@ -71,14 +71,16 @@
                         </table>
                     </div>
                 </div>
+
                 <div class="info">
                     <ul class="labels">
                         <li class="label">Concert</li>
                         <li class="label">pop/rock</li>
                         <li class="label">singer-songwriter</li>
                         <li class="label">belgen</li>
+                    </ul>
                 </div>
-                <p><i class="fas fa-user-friends"></i> Co-productie met Live Nation</p>
+                <p class="smaller"><i class="fas fa-user-friends"></i> Co-productie met Live Nation</p>
                 <p class="larger">The Bony King of Nowhere is helemaal terug. Gewaagder dan ooit bovendien.
                     Wat begon met rauwe demo-opnames in een koude caravan groeide uit tot
                     een open album dat radicaal breekt met het nauwe keurslijf van de brave
@@ -96,112 +98,142 @@
                     uit elkaar drijven: iets dat onbereikbaar wordt, ook al bevindt het zich ogenschijnlijk nog binnen
                     handbereik. De te ksten geven onverbloemd verslag van een loodzware episode, op pijnlijke en
                     pakkende wijze.</p>
-    </div>
+            </section>
+            <section id="data">
+                <h2>Alle data</h2>
+                <div class="data-options">
+                    <div class="data-header">
+                        <p>vr 11 okt</p>
+                        <button onclick="showInfo()">Toon info</button>
+                    </div>
+                    <div id="data-info" class="noshow" class="no show">
+                        <table>
+                            <tr>
+                                <td>20:00</td>
+                                <td>
+                                    <a href="https://www.develinx.be/" class="bold"> <i class="fas fa-map-marker-alt"></i> De Velinx</a>
+                                </td>
+                                    
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="data-header ">
+                        <p>za 12 okt</p>
+                        <button>Toon info</button>
+                    </div>
+                    <div class="data-info slideIn" class="no show">
 
-    </section>
-    <section id="data">
-        <h2>Alle data</h2>
-    </section>
-    <section id="tips">
-        <h2>Enkele aanraders</h2>
-        <div class="image-wrapper">
-            <img src="images/bex-catherine-romano.jpg" alt="Bex-Catherine-Romano">
-            <div class="image-info">
-                <p class="new-date">Nieuwe datum</p>
-                <p>di 20 juni</p>
-                <p class="artist">Bex-Catherine-Romano</p>
-                <div>
-                    <a href="">Info & tickets</a>
-                    <i class="fas fa-chevron-circle-right"></i>
+                    </div>
+                    <div class="data-header">
+                        <p>zo 13 okt</p>
+                        <button>Toon info</button>
+                    </div>
+                    <div class="data-info slideIn" class="no show">
+
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="image-wrapper">
-            <img src="images/the-specials.jpg" alt="The Specials">
-            <div class="image-info">
-                <p>di 10 november</p>
-                <p class="artist">The Specials</p>
-                <div>
-                    <a href="">Info & tickets</a>
-                    <i class="fas fa-chevron-circle-right"></i>
+            </section>
+            <section id="tips">
+                <h2>Enkele aanraders</h2>
+                <div class="image-wrapper">
+                    <img src="images/bex-catherine-romano.jpg" alt="Bex-Catherine-Romano">
+                    <div class="image-info">
+                        <p class="new-date">Nieuwe datum</p>
+                        <p>di 20 juni</p>
+                        <p class="artist">Bex-Catherine-Romano</p>
+                        <div>
+                            <a href="">Info & tickets</a>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="image-wrapper">
-            <img src="images/david-gray.jpg" alt="David Gray">
-            <div class="image-info">
-                <p>do 2 mei</p>
-                <p class="artist">David Gray</p>
-                <div>
-                    <a href="">Info & tickets</a>
-                    <i class="fas fa-chevron-circle-right"></i>
+                <div class="image-wrapper">
+                    <img src="images/the-specials.jpg" alt="The Specials">
+                    <div class="image-info">
+                        <p>di 10 november</p>
+                        <p class="artist">The Specials</p>
+                        <div>
+                            <a href="">Info & tickets</a>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <button class="program-btn">Volledig programma</button>
-    </section>
-    </main>
-    <footer>
-        <div class="footer-top">
-            <div>
-                <ul>
-                    <li><a href="">Programma</a></li>
-                    <li><a href="">Ticketinfo</a></li>
-                    <li><a href="">Praktisch</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <p class="subtitle">Meer info</p>
-                    <li><a href="">Steun ons</a></li>
-                    <li><a href="">Engagement & Erfgoed</a></li>
-                    <li><a href="">Contact</a></li>
+                <div class="image-wrapper">
+                    <img src="images/david-gray.jpg" alt="David Gray">
+                    <div class="image-info">
+                        <p>do 2 mei</p>
+                        <p class="artist">David Gray</p>
+                        <div>
+                            <a href="">Info & tickets</a>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <button class="program-btn">Volledig programma</button>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-top">
+                <div>
+                    <ul>
+                        <li><a href="">Programma</a></li>
+                        <li><a href="">Ticketinfo</a></li>
+                        <li><a href="">Praktisch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <p class="subtitle">Meer info</p>
+                        <li><a href="">Steun ons</a></li>
+                        <li><a href="">Engagement & Erfgoed</a></li>
+                        <li><a href="">Contact</a></li>
+                        <br>
+                        <li><a href="">Ticketverkoop</a></li>
+                        <li><a href="">Waardebonnen</a></li>
+                        <li><a href="">Bereikbaarheid</a></li>
+                        <li><a href="">Toegankelijkheid</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="subtitle">Zaal</p>
+                    <p class="company">Het Casino</p>
+                    <p>Maastrichtersteenweg 1
+                        <br>3700 Tongeren
+                    </p>
+                    <a href="" class="route">Toon route</a>
+
+                    <p class="subtitle">Café-restaurant</p>
+                    <p class="company">Ijscasino</p>
+                    <p>Maastrichtersteenweg 2
+                        <br>3700 Tongeren
+                    </p>
+                    <a href="" class="route">Toon route</a>
+                </div>
+                <div>
+                    <p class="subtitle">Ticketbalie</p>
+                    <p>T. +32 (0)12 34 56 78
+                        <br>dinsdag + vrijdag
+                        <br>van 10u00 tot 12u30</p>
                     <br>
-                    <li><a href="">Ticketverkoop</a></li>
-                    <li><a href="">Waardebonnen</a></li>
-                    <li><a href="">Bereikbaarheid</a></li>
-                    <li><a href="">Toegankelijkheid</a></li>
+                    <p>maandag t/m vrijdag
+                        <br>13u30-17u00
+                        <br>dinsdag
+                        <br>van 17u tot 18u30</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul>
+                    <li>&copy; 2019</li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
                 </ul>
             </div>
-            <div>
-                <p class="subtitle">Zaal</p>
-                <p class="company">Het Casino</p>
-                <p>Maastrichtersteenweg 1
-                    <br>3700 Tongeren
-                </p>
-                <a href="" class="route">Toon route</a>
-
-                <p class="subtitle">Café-restaurant</p>
-                <p class="company">Ijscasino</p>
-                <p>Maastrichtersteenweg 2
-                    <br>3700 Tongeren
-                </p>
-                <a href="" class="route">Toon route</a>
-            </div>
-            <div>
-                <p class="subtitle">Ticketbalie</p>
-                <p>T. +32 (0)12 34 56 78
-                    <br>dinsdag + vrijdag
-                    <br>van 10u00 tot 12u30</p>
-                <br>
-                <p>maandag t/m vrijdag
-                    <br>13u30-17u00
-                    <br>dinsdag
-                    <br>van 17u tot 18u30</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <ul>
-                <li>&copy; 2019</li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Disclaimer</a></li>
-            </ul>
-        </div>
-    </footer>
+        </footer>
     </div>
 
     <script src="https://kit.fontawesome.com/24d7844539.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

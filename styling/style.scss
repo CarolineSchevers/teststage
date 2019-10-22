@@ -29,17 +29,63 @@ hr {
 }
 
 p, i {
-    margin: 0.5rem 0;
     font-size: 1rem;
 }
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: $dark-blue;
+    color: #fff;
+    border: none;
+}
+
 .larger {
     font-size: larger;
 }
+
+.smaller {
+    font-size: smaller;
+}
+
+.light-gray {
+    color: $dark-gray
+}
+.bold {
+    font-weight: bolder;
+}
+
+.noshow {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
 //Navigation
 nav {
     background-color: $blue;
     width: 100%;
-    @include flex-row;
+    @include flex-column;
+
+    ul li {
+        @include flex-column;
+        align-items: flex-end;
+        padding-right: 20px
+    }
+}
+
+.nav-toggle {
+    text-align: right;
+    width: 100%;
+    
+    i {
+        padding: 10px 20px;
+    }
 }
 
 //Header
@@ -80,13 +126,7 @@ h1 {
     margin: 0;
 
     button {
-        display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        background: $dark-blue;
-        color: #fff;
-        border: none;
     }
 
     a {
@@ -122,17 +162,6 @@ h1 {
     align-items: center;
 }
 
-.smaller {
-    font-size: smaller;
-}
-
-.light-gray {
-    color: $dark-gray
-}
-.bold {
-    font-weight: bolder;
-}
-
 table {
     th {
         display: flex;
@@ -145,7 +174,15 @@ table {
     }
 }
 //Section data
+.data-header {
+    display: flex;
+    justify-content: space-between;
 
+    p {
+        text-transform: uppercase;
+    }
+    
+}
 //Section tips
 section#tips {
     @include flex-column;
