@@ -28,6 +28,10 @@ main {
     padding: 20px;
 
     a {
+
+        // &:visited {
+        //     color: $dark-blue;
+        // }
         &:hover {
             color: $blue;
         }
@@ -43,6 +47,8 @@ p,
 i {
     font-size: 1rem;
 }
+
+.image-info { line-height: 0.2rem; }
 
 button {
     display: flex;
@@ -72,8 +78,12 @@ button {
     font-size: smaller;
 }
 
+.blue {
+    color: $blue;
+}
+
 .light-gray {
-    color: $dark-gray
+    color: $dark-gray;
 }
 
 .uppercase {
@@ -164,10 +174,15 @@ h1 {
     overflow: hidden;
     transition: 0.6s;
 
+    img {
+        opacity: 0.9;
+    }
+
     p,
     a,
     i {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: bolder;
         text-transform: uppercase;
     }
 
@@ -178,6 +193,7 @@ h1 {
     .artist {
         font-size: 1rem;
         font-weight: bolder;
+        margin: 0.5rem 0;
     }
 
     &:hover {
@@ -262,6 +278,15 @@ table {
 }
 
 //Section data
+#data {
+    .show {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $blue;
+        padding: 10px;
+    }
+}
+
 .data-header {
     display: flex;
     justify-content: space-between;
@@ -271,18 +296,30 @@ table {
     }
 }
 
+.fa-info-circle:focus::after,
+.fa-info-circle:hover::after {
+    content: "Staand concert met beperkt aantal zitplaatsen op het balkon.
+            Zitplaatsen kunnen niet gereserveerd worden, wie wil zitten komt best op tijd.";
+    background-color: $tooltip;
+    color: #fff;
+    position: absolute;
+    height: fit-content;
+    width: 10rem;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    border-radius: 0.5rem;
+    margin-top: -10px;
+    margin-left: 5px;
+}
 
 //Section tips
 section#tips {
     @include flex-column;
 
-    .all-tips {
-        @include flex-column;
-    }
+    .all-tips { @include flex-column; }
 
-    button {
-        align-items: center;
-    }
+    button { align-items: center; }
 }
 
 .program-btn {
@@ -295,9 +332,10 @@ section#tips {
 .new-date {
     background-color: $dark-blue;
     color: #fff;
-    padding: 3px;
+    padding: 5px;
     display: inline;
     text-transform: uppercase;
+    order: 1;
 }
 
 //Footer
@@ -335,74 +373,64 @@ section#tips {
 
 .company {
     color: $blue;
+    font-size: larger;
 }
 
 //Tablet
 @media only screen and (min-width: 767px) {
-    .nav-toggle {
-        display: none;
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
     }
 
+    //Navigation
+    .nav-toggle { display: none; }
+
     #nav-items {
-        display: flex;
+        @include flex-row;
         justify-content: flex-end;
     }
 
-    .buy-ticket {
-        button {
-            width: auto;
-        }
+    //Header 
+    header .image-wrapper {
+            p { font-size: 1.5rem; }
+
+            h1 { font-size: 2.5rem; }
     }
 
     //Section data
-    .info-btn {
-        display: none;
-    }
+    .info .labels .label { font-size: 1rem; }
+
+    .info-btn { display: none; }
 
     .noshow {
         display: flex;
+        flex-direction: column;
     }
 
-    .data-options {
-        width: 100%;
-    }
+    .data-options { width: 100%; }
 
-    .data-header {
-        display: none;
-    }
+    .data-header { display: none; }
 
     .performance {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 90%;
 
         ul {
             display: flex;
 
-            li {
-                width: 6rem;
-            }
+            li { width: 6rem; }
 
-            span {
-                color: $blue;
-            }
+            button.uppercase { width: 10rem; }
 
-            button.uppercase {
-                width: 10rem;
-            }
+            .time { width: 3rem; }
 
-            .time {
-                width: 3rem;
-            }
-
-            a {
-                text-decoration: underline;
-            }
+            a { text-decoration: underline; }
         }
 
-        .flex-end {
-            justify-content: flex-end;
-        }
+        .flex-end { justify-content: flex-end;}
     }
 
     //Section tips
@@ -418,7 +446,25 @@ section#tips {
         .image-wrapper {
             display: flex;
             width: 50%;
+                p, a, i { font-size: 1rem; }
+                p.artist { font-size: 1.5rem; }
         }
+        .flex-row {
+            flex-direction: column;
+            align-items: flex-start;
+            p {
+                margin: 0
+            }
+            .new-date {
+                order: 0;
+            }
+        }
+    }
+
+    button.program-btn {
+        width: fit-content;
+        align-self: center;
+        margin: 40px 0px;
     }
 
     //Footer
@@ -436,16 +482,18 @@ section#tips {
 
 //Desktop
 @media only screen and (min-width: 992px) {
+    nav a, main p { font-size: 1.3rem; }
+
+    .larger { font-size: 1.5rem;}
+
     header {
         background-color: $blue;
 
-        .image-wrapper {
-            display: flex;
-        }
+        .image-wrapper { display: flex; }
     }
 
-    main {
-        padding: 0;
+    main { 
+        padding: 0; 
     }
 
     //Section info
@@ -481,17 +529,28 @@ section#tips {
 
     //Section data
     section#data,
-    section#tips,
-    .footer-top {
-        padding: 50px;
+    section#tips {
+        padding: 50px 50px 0px 50px;
     }
 
     .performance {
         width: 100%;
 
-        ul li {
-            width: 8rem;
+        .date { 
+            font-size: 1.8rem;
+            width: fit-content;
         }
+
+        ul li {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            width: fit-content;
+
+            i { padding: 0px 10px}
+        }
+
+        button.buy-btn { width: 2rem;}
     }
 
     //Section tips
@@ -502,11 +561,20 @@ section#tips {
             display: flex;
             justify-content: space-between;
 
-            .image-wrapper {
-                width: 30%;
+            .image-wrapper { 
+                width: 33%; 
+            
+                a, p, i {
+                    font-size: 0.7rem;
+                }
+                p.artist {
+                    font-size: 1rem;
+                }
+                .new-date {
+                    padding: 3px;
+                }
             }
         }
-
     }
 
     .program-btn {
@@ -519,13 +587,10 @@ section#tips {
     .footer-top {
         display: flex;
         flex-direction: row;
+        padding: 50px;
 
-        div {
-            width: 25%;
-        }
+        div { width: 25%; }
     }
 
-    .footer-bottom {
-        padding: 10px 50px;
-    }
+    .footer-bottom { padding: 10px 50px; }
 }

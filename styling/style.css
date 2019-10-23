@@ -42,6 +42,10 @@ i {
   font-size: 1rem;
 }
 
+.image-info {
+  line-height: 0.2rem;
+}
+
 button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,6 +79,10 @@ button:hover {
 
 .smaller {
   font-size: smaller;
+}
+
+.blue {
+  color: #658FC1;
 }
 
 .light-gray {
@@ -200,17 +208,22 @@ h1 span {
   bottom: 1rem;
   z-index: 1;
   color: #fff;
-  line-height: 0.2rem;
+  line-height: 1rem;
 }
 
 .image-wrapper a {
   color: #fff;
 }
 
+.image-wrapper img {
+  opacity: 0.9;
+}
+
 .image-wrapper p,
 .image-wrapper a,
 .image-wrapper i {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bolder;
   text-transform: uppercase;
 }
 
@@ -221,6 +234,7 @@ h1 span {
 .image-wrapper .artist {
   font-size: 1rem;
   font-weight: bolder;
+  margin: 0.5rem 0;
 }
 
 .image-wrapper:hover img {
@@ -332,6 +346,18 @@ table td.bold {
   width: 1rem;
 }
 
+#data .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid #658FC1;
+  padding: 10px;
+}
+
 .data-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,6 +369,24 @@ table td.bold {
 
 .data-header p {
   text-transform: uppercase;
+}
+
+.fa-info-circle:focus::after,
+.fa-info-circle:hover::after {
+  content: "Staand concert met beperkt aantal zitplaatsen op het balkon. Zitplaatsen kunnen niet gereserveerd worden, wie wil zitten komt best op tijd.";
+  background-color: #162E4D;
+  color: #fff;
+  position: absolute;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 10rem;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  border-radius: 0.5rem;
+  margin-top: -10px;
+  margin-left: 5px;
 }
 
 section#tips {
@@ -381,9 +425,12 @@ section#tips button {
 .new-date {
   background-color: #182D4F;
   color: #fff;
-  padding: 3px;
+  padding: 5px;
   display: inline;
   text-transform: uppercase;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .footer-top {
@@ -425,9 +472,14 @@ section#tips button {
 
 .company {
   color: #658FC1;
+  font-size: larger;
 }
 
 @media only screen and (min-width: 767px) {
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
   .nav-toggle {
     display: none;
   }
@@ -435,12 +487,22 @@ section#tips button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .buy-ticket button {
-    width: auto;
+  header .image-wrapper p {
+    font-size: 1.5rem;
+  }
+  header .image-wrapper h1 {
+    font-size: 2.5rem;
+  }
+  .info .labels .label {
+    font-size: 1rem;
   }
   .info-btn {
     display: none;
@@ -449,6 +511,10 @@ section#tips button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .data-options {
     width: 100%;
@@ -463,6 +529,9 @@ section#tips button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 90%;
   }
   .performance ul {
@@ -472,9 +541,6 @@ section#tips button {
   }
   .performance ul li {
     width: 6rem;
-  }
-  .performance ul span {
-    color: #658FC1;
   }
   .performance ul button.uppercase {
     width: 10rem;
@@ -513,6 +579,38 @@ section#tips button {
     display: flex;
     width: 50%;
   }
+  section#tips .image-wrapper p, section#tips .image-wrapper a, section#tips .image-wrapper i {
+    font-size: 1rem;
+  }
+  section#tips .image-wrapper p.artist {
+    font-size: 1.5rem;
+  }
+  section#tips .flex-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section#tips .flex-row p {
+    margin: 0;
+  }
+  section#tips .flex-row .new-date {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  button.program-btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 40px 0px;
+  }
   .footer-top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -528,6 +626,12 @@ section#tips button {
 }
 
 @media only screen and (min-width: 992px) {
+  nav a, main p {
+    font-size: 1.3rem;
+  }
+  .larger {
+    font-size: 1.5rem;
+  }
   header {
     background-color: #658FC1;
   }
@@ -579,15 +683,37 @@ section#tips button {
     background-color: #fff;
   }
   section#data,
-  section#tips,
-  .footer-top {
-    padding: 50px;
+  section#tips {
+    padding: 50px 50px 0px 50px;
   }
   .performance {
     width: 100%;
   }
+  .performance .date {
+    font-size: 1.8rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
   .performance ul li {
-    width: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .performance ul li i {
+    padding: 0px 10px;
+  }
+  .performance button.buy-btn {
+    width: 2rem;
   }
   section#tips {
     display: -webkit-box;
@@ -607,7 +733,16 @@ section#tips button {
             justify-content: space-between;
   }
   section#tips .all-tips .image-wrapper {
-    width: 30%;
+    width: 33%;
+  }
+  section#tips .all-tips .image-wrapper a, section#tips .all-tips .image-wrapper p, section#tips .all-tips .image-wrapper i {
+    font-size: 0.7rem;
+  }
+  section#tips .all-tips .image-wrapper p.artist {
+    font-size: 1rem;
+  }
+  section#tips .all-tips .image-wrapper .new-date {
+    padding: 3px;
   }
   .program-btn {
     width: -webkit-fit-content;
@@ -626,6 +761,7 @@ section#tips button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 50px;
   }
   .footer-top div {
     width: 25%;
