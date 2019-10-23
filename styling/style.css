@@ -464,6 +464,11 @@ section#tips button {
   header {
     background-color: #658FC1;
   }
+  header .image-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   main {
     padding: 0;
   }
@@ -494,7 +499,7 @@ section#tips button {
     border: none;
     position: absolute;
     width: 30%;
-    top: 630px;
+    top: 300px;
   }
   section#info .info {
     width: 75%;
