@@ -3,11 +3,16 @@
 
 //Mobile
 //General
-html, body {
+html,
+body {
     width: 100%;
     color: #000;
     margin: 0;
     padding: 0;
+}
+
+.wrapper {
+    max-width: 1600px;
 }
 
 a {
@@ -28,7 +33,8 @@ hr {
     width: 100%;
 }
 
-p, i {
+p,
+i {
     font-size: 1rem;
 }
 
@@ -53,6 +59,10 @@ button {
 .light-gray {
     color: $dark-gray
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
 .bold {
     font-weight: bolder;
 }
@@ -75,14 +85,18 @@ nav {
     ul li {
         @include flex-column;
         align-items: flex-end;
-        padding-right: 20px
+        padding-right: 20px;
+        
+        a {
+            color: #fff;
+        }
     }
 }
 
 .nav-toggle {
     text-align: right;
     width: 100%;
-    
+
     i {
         padding: 10px 20px;
     }
@@ -95,6 +109,7 @@ header {
 
 h1 {
     font-size: 1.5rem;
+
     span {
         font-weight: lighter;
     }
@@ -102,7 +117,10 @@ h1 {
 
 .image-wrapper {
     @include image-with-text;
-    p, a, i {
+
+    p,
+    a,
+    i {
         font-size: 0.5rem;
         text-transform: uppercase;
     }
@@ -167,12 +185,17 @@ table {
         display: flex;
         align-items: center;
         font-weight: lighter;
-        i { padding-right: 5px;}
+
+        i {
+            padding-right: 5px;
+        }
     }
+
     td.bold {
         width: 1rem;
     }
 }
+
 //Section data
 .data-header {
     display: flex;
@@ -181,11 +204,20 @@ table {
     p {
         text-transform: uppercase;
     }
-    
 }
+
+
 //Section tips
 section#tips {
     @include flex-column;
+
+    .all-tips {
+        @include flex-column;
+    }
+
+    button {
+        align-items: center;
+    }
 }
 
 .program-btn {
@@ -213,6 +245,7 @@ section#tips {
     a {
         color: $blue;
     }
+
     .route {
         text-decoration: underline;
     }
@@ -221,7 +254,7 @@ section#tips {
 .footer-bottom {
     padding: 0px 20px;
     background-color: $footer;
-    
+
 
     ul {
         @include flex-row;
@@ -240,10 +273,180 @@ section#tips {
 }
 
 //Tablet
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media only screen and (min-width: 767px) {
+    .nav-toggle {
+        display: none;
+    }
 
+    #nav-items {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .buy-ticket {
+        button {
+            width: auto;
+        }
+    }
+
+    //Section data
+    .info-btn {
+        display: none;
+    }
+
+    .noshow {
+        display: flex;
+    }
+    .data-options {
+        width: 100%;
+    }
+
+    .data-header {
+        display: none;
+    }
+
+    .performance {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;    
+
+        ul {
+            display: flex;
+            
+            li {
+                width: 6rem;
+            }
+            span {
+                color: $blue;
+            }
+
+            button.uppercase {
+                background-color: #fff;
+                color: $dark-blue;
+                border: 1px solid $dark-blue;
+                width: 10rem;
+                justify-content: space-between;
+            }
+
+            .time {
+                width: 3rem;
+            }
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+    }
+
+    //Section tips
+    section#tips {
+        display: flex;
+        flex-direction: column;
+
+        .all-tips {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .image-wrapper {
+            display: flex;
+            width: 50%;
+        }
+    }
+
+    //Footer
+    .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+
+        div {
+            width: 50%;
+            height: auto;
+        }
+    }
 }
+
 //Desktop
 @media only screen and (min-width: 992px) {
+    header {
+        background-color: $blue;
+    }
+    
+    main {
+        padding: 0;
+    }
+    //Section info
+    section#info {
+        display: flex;
+        flex-direction: row;
+        background-color: $blue;
 
+        .buy {
+            order: 1;
+            display: flex;
+            justify-content: center; 
+            width: 50%
+        }
+
+        .buy-ticket {
+            background-color: #fff;
+            border: none;
+            position: absolute;
+            width: 30%;
+            top: 630px;
+        }
+       
+        .info {
+            width: 75%;
+            padding: 50px;
+            background-color: #fff;
+        }
+    }
+
+    //Section data
+    section#data, section#tips, .footer-top {
+        padding: 50px;
+    }
+
+    .performance {
+        width: 100%;
+
+        ul li {
+            width: 8rem;
+        }
+    }
+
+    //Section tips
+    section#tips{
+        @include flex-column;
+
+        .all-tips {
+            display: flex;
+            justify-content: space-between;
+
+            .image-wrapper {
+                width: 30%;
+            }
+        }
+       
+    }
+    .program-btn {
+        width: fit-content;
+        align-self: center;
+        margin-top: 40px;
+    }
+        //Footer
+        .footer-top {
+            display:flex;
+            flex-direction:row;
+
+            div {
+                width: 25%;
+            }
+        }
+
+        .footer-bottom {
+            padding: 10px 50px;
+        }
 }
