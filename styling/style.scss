@@ -45,7 +45,16 @@ button {
     padding: 10px;
     background: $dark-blue;
     color: #fff;
-    border: none;
+    border: 1px solid $dark-blue;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        background-color: #fff;
+        color: $dark-blue;
+        border: 1px solid $dark-blue;
+    }
 }
 
 .larger {
@@ -75,6 +84,17 @@ button {
     display: block;
 }
 
+button.buy-btn {
+    background-color: #fff;
+    color: $dark-blue;
+    border: 1px solid $dark-blue;
+    justify-content: space-between;
+    &:hover {
+        background-color: $dark-blue;
+        border: 1px solid $dark-blue;
+        color: #fff;
+    }
+}
 
 //Navigation
 nav {
@@ -117,6 +137,8 @@ h1 {
 
 .image-wrapper {
     @include image-with-text;
+    overflow: hidden;
+    transition: 0.6s;
 
     p,
     a,
@@ -132,6 +154,16 @@ h1 {
     .artist {
         font-size: 1rem;
         font-weight: bolder;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: 0.8s;
+        }
+        p, a, i, h1 {
+            color: #000;
+        }
     }
 }
 
@@ -223,7 +255,7 @@ section#tips {
 .program-btn {
     color: white;
     background-color: $dark-blue;
-    border: none;
+    border: 1px solid $dark-blue;
     padding: 15px 10px;
 }
 
@@ -321,11 +353,7 @@ section#tips {
             }
 
             button.uppercase {
-                background-color: #fff;
-                color: $dark-blue;
-                border: 1px solid $dark-blue;
                 width: 10rem;
-                justify-content: space-between;
             }
 
             .time {
