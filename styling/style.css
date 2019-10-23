@@ -112,13 +112,15 @@ button.buy-btn:hover {
   color: #fff;
 }
 
-nav a, .footer-top a {
+nav a,
+.footer-top a {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
-nav a:hover, .footer-top a:hover {
+nav a:hover,
+.footer-top a:hover {
   letter-spacing: 2px;
 }
 
@@ -229,7 +231,10 @@ h1 span {
   opacity: 0.6;
 }
 
-.image-wrapper:hover p, .image-wrapper:hover a, .image-wrapper:hover i, .image-wrapper:hover h1 {
+.image-wrapper:hover p,
+.image-wrapper:hover a,
+.image-wrapper:hover i,
+.image-wrapper:hover h1 {
   color: #182D4F;
 }
 
@@ -559,16 +564,23 @@ section#tips button {
   section#info .buy-ticket {
     background-color: #fff;
     border: none;
-    position: absolute;
-    width: 30%;
-    top: 300px;
+    width: 80%;
+    top: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: -130px;
   }
   section#info .info {
     width: 75%;
     padding: 50px;
     background-color: #fff;
   }
-  section#data, section#tips, .footer-top {
+  section#data,
+  section#tips,
+  .footer-top {
     padding: 50px;
   }
   .performance {
