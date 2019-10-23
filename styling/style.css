@@ -28,6 +28,10 @@ main {
   padding: 20px;
 }
 
+main a:hover {
+  color: #658FC1;
+}
+
 hr {
   border: 1px solid #658FC1;
   width: 100%;
@@ -177,6 +181,7 @@ h1 span {
 
 .image-wrapper {
   position: relative;
+  background-color: #fff;
   overflow: hidden;
   -webkit-transition: 0.6s;
   transition: 0.6s;
