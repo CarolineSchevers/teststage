@@ -1,6 +1,8 @@
 @import 'mixins';
 @import 'colors';
 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); //font-family: 'Roboto', sans-serif;
+
 //Mobile
 //General
 html,
@@ -9,6 +11,7 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -28,10 +31,9 @@ main {
     padding: 20px;
 
     a {
-
-        // &:visited {
-        //     color: $dark-blue;
-        // }
+        &:visited {
+            color: $dark-blue;
+        }
         &:hover {
             color: $blue;
         }
@@ -252,6 +254,10 @@ h1 {
             background-color: #000;
             margin: 3px;
         }
+    }
+
+    p.smaller {
+        font-weight: bolder;
     }
 }
 
@@ -482,7 +488,7 @@ section#tips {
 
 //Desktop
 @media only screen and (min-width: 992px) {
-    nav a, main p { font-size: 1.3rem; }
+    nav a, main p { font-size: 1.1rem; }
 
     .larger { font-size: 1.5rem;}
 

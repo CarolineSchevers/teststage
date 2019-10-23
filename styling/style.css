@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 html,
 body {
   width: 100%;
   color: #000;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -26,6 +28,10 @@ ul li {
 
 main {
   padding: 20px;
+}
+
+main a:visited {
+  color: #182D4F;
 }
 
 main a:hover {
@@ -310,6 +316,10 @@ h1 span {
   color: #fff;
   background-color: #000;
   margin: 3px;
+}
+
+.info p.smaller {
+  font-weight: bolder;
 }
 
 .flex-row {
@@ -627,7 +637,7 @@ section#tips button {
 
 @media only screen and (min-width: 992px) {
   nav a, main p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .larger {
     font-size: 1.5rem;
