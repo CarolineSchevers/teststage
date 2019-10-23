@@ -96,6 +96,18 @@ button.buy-btn {
     }
 }
 
+nav a, .footer-top a {
+    transition: all 0.3s ease-in; 
+            cursor: pointer;
+            &:hover {
+                letter-spacing: 2px; 
+            }
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+    transition: 0.8s;
+}
 //Navigation
 nav {
     background-color: $blue;
@@ -160,9 +172,13 @@ h1 {
         img {
             transform: scale(1.1);
             transition: 0.8s;
+            opacity: 0.6;
         }
         p, a, i, h1 {
-            color: #000;
+            color: $dark-blue;
+        }
+        .new-date {
+            background-color: #fff;
         }
     }
 }
@@ -359,6 +375,7 @@ section#tips {
             .time {
                 width: 3rem;
             }
+            a { text-decoration: underline;}
         }
 
         .flex-end {

@@ -108,6 +108,22 @@ button.buy-btn:hover {
   color: #fff;
 }
 
+nav a, .footer-top a {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+nav a:hover, .footer-top a:hover {
+  letter-spacing: 2px;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
 nav {
   background-color: #658FC1;
   width: 100%;
@@ -178,7 +194,6 @@ h1 span {
   z-index: 1;
   color: #fff;
   line-height: 0.2rem;
-  background-color: rgba(255, 255, 255, 0.205);
 }
 
 .image-wrapper a {
@@ -206,10 +221,15 @@ h1 span {
           transform: scale(1.1);
   -webkit-transition: 0.8s;
   transition: 0.8s;
+  opacity: 0.6;
 }
 
 .image-wrapper:hover p, .image-wrapper:hover a, .image-wrapper:hover i, .image-wrapper:hover h1 {
-  color: #000;
+  color: #182D4F;
+}
+
+.image-wrapper:hover .new-date {
+  background-color: #fff;
 }
 
 .buy-ticket {
@@ -451,6 +471,9 @@ section#tips button {
   }
   .performance ul .time {
     width: 3rem;
+  }
+  .performance ul a {
+    text-decoration: underline;
   }
   .performance .flex-end {
     -webkit-box-pack: end;
